@@ -1,5 +1,7 @@
 <?php
 
+namespace Exercises;
+
     $userArrayObject = '[
         {
             "name" : "Eryn Bryan",
@@ -28,4 +30,3 @@
         }
 
     echo '</pre>';
-?>

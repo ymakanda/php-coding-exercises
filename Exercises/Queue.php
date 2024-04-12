@@ -1,6 +1,8 @@
 <?php
+
 declare(strict_types=1);
-namespace Exercises\Queue;
+
+namespace Exercises;
 
 use function Neos\Flow\var_dump;
 
@@ -38,7 +40,7 @@ final class Queue
         $this->queue = [];
     }
 
-    public function add(mixed $value) { 
+    public function add(mixed $value): void { 
         array_push($this->queue, $value); // adds an item to the back of the queue
     }
 
@@ -74,7 +76,7 @@ final class Queue
             }
         }
         
-        return json_encode($interweaved);
+        return $interweaved;
     }
 
 }

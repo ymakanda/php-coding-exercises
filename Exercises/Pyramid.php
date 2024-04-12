@@ -1,6 +1,9 @@
 <?php
+
 declare(strict_types=1);
-namespace Exercises\Pyramid;
+
+namespace Exercises;
+
 /**
 * Print a pyramid.
 *
@@ -9,17 +12,17 @@ namespace Exercises\Pyramid;
 * ' ### '
 * '#####'
 */
+
 final class Pyramid
 {
-    public static function print(int $rows) {
+    public static function print(int $rows): void {
        for($i = 1; $i <= $rows; $i++) {
         for($j=1; $j <= (2 * $rows) -1 ; $j++) {
             if($j >= $rows-($i-1) && $j <= $rows +($i - 1)) {
                 echo "#";
-            }else{
+            }else   {
                 echo "&nbsp;";
             }
-
         }
         echo "<br>";
 
